@@ -5,7 +5,9 @@ require_once 'numberAlgs.php';
 
 $test = new Solution();
 
-$nums = [3,1,2,10,1];
-$ans = $test->runningSum($nums);
-var_dump($ans);
-;
+$nums = [1,2,3];
+$ans = $test->numIdenticalPairs($nums);
+echo $ans;
+print "</br>";
+print "\tdone";
+

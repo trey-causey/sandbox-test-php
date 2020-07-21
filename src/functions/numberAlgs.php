@@ -36,4 +36,26 @@ class Solution {
         }
         return $ans;
     }
+
+    /**
+     * @param Integer[] $nums
+     * @return Integer
+     */
+    function numIdenticalPairs($nums)
+    {
+        $count = 0;
+        for($i=0; $i<count($nums);$i++)
+        {
+            $j=$i + 1;
+            while($j<count($nums))
+            {
+                if($nums[$i] == $nums[$j]){
+                    $count++;
+                }
+                $j++;
+            }
+
+        }
+        return $count;
+    }
 }
