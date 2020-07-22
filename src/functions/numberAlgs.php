@@ -58,4 +58,20 @@ class Solution {
         }
         return $count;
     }
+
+    /**
+     * @param Integer[] $nums
+     * @param Integer $n
+     * @return Integer[]
+     */
+    function shuffle($nums, $n)
+    {
+        $arr = [];
+        for($i=0; ($i<(count($nums)/2)); $i++)
+        {
+            array_push($arr, $nums[$i]);
+            array_push($arr, $nums[($i+$n)]);
+        }
+        return $arr;
+    }
 }
