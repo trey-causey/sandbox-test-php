@@ -74,4 +74,24 @@ class Solution {
         }
         return $arr;
     }
+
+    /**
+     * @param Integer[] $candies
+     * @param Integer $extraCandies
+     * @return Boolean[]
+     */
+    function kidsWithCandies($candies, $extraCandies)
+    {
+        $ans = [];
+        $greatestCandies = max($candies);
+        foreach ($candies as $candy)
+        {
+            if (($candy + $extraCandies) >= $greatestCandies) {
+                array_push($ans, true);
+            } else {
+                array_push($ans, false);
+            }
+        }
+        return $ans;
+    }
 }

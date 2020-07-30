@@ -4,10 +4,10 @@ require __DIR__ . '/../../vendor/autoload.php';
 require_once 'numberAlgs.php';
 
 $test = new Solution();
-$nums = [1,1,2,2];
-var_dump($nums);
-$n = 2;
-$ans = $test->shuffle($nums,$n);
+$candies = [12,1,12];
+$extraCandies = 10;
+var_dump($candies);
+$ans = $test->kidsWithCandies($candies, $extraCandies);
 var_dump($ans);
 print "</br>";
 print "\tdone";
