@@ -2,13 +2,15 @@
 
 require __DIR__ . '/../../vendor/autoload.php';
 require_once 'numberAlgs.php';
+require_once 'stringAlgs.php';
 
-$test = new Solution();
-$candies = [12,1,12];
-$extraCandies = 10;
-var_dump($candies);
-$ans = $test->kidsWithCandies($candies, $extraCandies);
+$test = new StringSolution();
+$s = "codeleet";
+$indices = [4,5,6,7,0,2,1,3];
+var_dump($indices);
+$ans = $test->restoreString($s, $indices);
 var_dump($ans);
+print $ans;
 print "</br>";
 print "\tdone";
 

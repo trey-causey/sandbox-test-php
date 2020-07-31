@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
 
-class Solution {
+class NumberSolution {
 
     /**
      * @param Integer $num
