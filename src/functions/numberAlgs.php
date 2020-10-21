@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../../vendor/autoload.php';
 
-class Solution {
+class NumberSolution {
 
     /**
      * @param Integer $num
@@ -33,6 +33,64 @@ class Solution {
         {
             array_push($ans, $traillingSum += $num);
 
+        }
+        return $ans;
+    }
+
+    /**
+     * @param Integer[] $nums
+     * @return Integer
+     */
+    function numIdenticalPairs($nums)
+    {
+        $count = 0;
+        for($i=0; $i<count($nums);$i++)
+        {
+            $j=$i + 1;
+            while($j<count($nums))
+            {
+                if($nums[$i] == $nums[$j]){
+                    $count++;
+                }
+                $j++;
+            }
+
+        }
+        return $count;
+    }
+
+    /**
+     * @param Integer[] $nums
+     * @param Integer $n
+     * @return Integer[]
+     */
+    function shuffle($nums, $n)
+    {
+        $arr = [];
+        for($i=0; ($i<(count($nums)/2)); $i++)
+        {
+            array_push($arr, $nums[$i]);
+            array_push($arr, $nums[($i+$n)]);
+        }
+        return $arr;
+    }
+
+    /**
+     * @param Integer[] $candies
+     * @param Integer $extraCandies
+     * @return Boolean[]
+     */
+    function kidsWithCandies($candies, $extraCandies)
+    {
+        $ans = [];
+        $greatestCandies = max($candies);
+        foreach ($candies as $candy)
+        {
+            if (($candy + $extraCandies) >= $greatestCandies) {
+                array_push($ans, true);
+            } else {
+                array_push($ans, false);
+            }
         }
         return $ans;
     }
