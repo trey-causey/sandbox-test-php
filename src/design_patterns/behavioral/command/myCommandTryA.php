@@ -31,7 +31,7 @@ class addPointsCommandA extends Command {
 
     public function AddAPoint()
     {
-        var_dump($this->requestReceiverObject->TeamOwnerpoints);
+        var_dump($this->requestReceiverObject);
 
     }
 
