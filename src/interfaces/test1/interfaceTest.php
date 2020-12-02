@@ -9,7 +9,8 @@ interface person {
 }
 
 interface factory {
-
+    public function createNewDriver();
+    public function createNewTeacher();
 }
 
 abstract class speaker {

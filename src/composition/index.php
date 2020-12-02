@@ -1,4 +1,4 @@
-<?php
+<?php namespace Src\Composition;
 
 interface Shape {
     function Area($var1);
