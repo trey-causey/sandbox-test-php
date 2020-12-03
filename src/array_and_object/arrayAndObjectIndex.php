@@ -15,14 +15,20 @@ $arrayObject = [
     'teamowner' => 'dave'
 ];
 
+
 foreach ($arrayObject as $item)
 {
-    echo $item;
+   echo $item;
 }
 
+
 $teamOwnerObject = new TeamOwnerReceiver();
-var_dump($teamOwnerObject);
+//var_dump($teamOwnerObject);
 
 $teamOwnerObject->addPoint();
-var_dump($teamOwnerObject);
+//var_dump($teamOwnerObject);
+
+$test = (bool)is_iterable($arrayObject);
+//echo $test;
+
 

@@ -12,7 +12,7 @@ $driverArray = array();
 foreach (($testOutput[2]->data) as $driverObjects) {
     array_push($driverArray, $driverObjects);
 }
-$driverCodeMap = array();
+$driverCodeMap = array("" => "No Pick");
 foreach ($driverArray as $item) {
     if($item->code != NULL) {
         $driverCodeMap[$item->driverRef] = $item->code;
@@ -31,7 +31,7 @@ foreach ($pickArray as $i) {
    $ownerDriverArray = [$i->Driver1, $i->Driver2, $i->TurboDriver ];
     foreach ($ownerDriverArray as $name) {
         $name = strtolower($name);
-        echo $driverCodeMap[$name] . "\n";
+        echo "- DraftId: " . $i->DraftId . " - Draft: " .  $i->Draft . " - Owner: " . $i->Owner . " - Driver: " . $driverCodeMap[$name] . "\n";
     }
 }
 

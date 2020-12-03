@@ -1,6 +1,6 @@
 <?php
 
-namespace design_patterns\behavioral\myCommand;
+namespace design_patterns\behavioral\myCommandTryA;
 //transaction
 //encapsulate a request into an object
 //the request is to take a current score (number of points) and increment it by a certain amount
@@ -8,6 +8,7 @@ namespace design_patterns\behavioral\myCommand;
 //$points = 0;
 
 abstract class Command {
+    protected $receiverObjectInAbstractCommandClass;
     //this class declares an interface for executing operations
     //concrete ACommand subclasses specifyt a receiver-action pair by storing the receiver as an isntance variable
     //  and by by implementing Execute to invoke the request
