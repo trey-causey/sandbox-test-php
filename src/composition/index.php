@@ -19,13 +19,13 @@ class Square implements Shape {
 
 class Window {
 
-    function Area($width, $height): float
+    function Area($length): float
     {
-       $rec = new Rectangle();
-       return $rec->Area($width, $height);
+       $rec = new Square();
+       return $rec->Area($length);
     }
 }
 
 $win = new Window();
-$ans = $win->Area(4, 8);
+$ans = $win->Area(6);
 var_dump($ans);
