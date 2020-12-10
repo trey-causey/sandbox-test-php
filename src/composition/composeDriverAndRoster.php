@@ -23,16 +23,24 @@ class StandardDriver extends Driver {
 
 }
 
-class Roster {
-    /** @var IDriver  */
-    protected IDriver $driver;
+class TurboDriver extends Driver {
 
-    public function __construct(IDriver $driver)
+}
+
+class Roster {
+
+    protected IDriver $primaryDriver;
+    protected IDriver $secondaryDriver;
+    protected IDriver $turboDriver;
+
+    public function __construct(IDriver $primaryDriver, IDriver $secondaryDriver, IDriver $turboDriver)
     {
-        $this->driver = $driver;
+        $this->primaryDriver = $primaryDriver;
+        $this->secondaryDriver = $secondaryDriver;
+        $this->turboDriver = $turboDriver;
     }
 }
 
-$rosObj = new Roster(new StandardDriver());
+$rosObj = new Roster(new StandardDriver(), new StandardDriver(), new TurboDriver());
 var_dump($rosObj);
 

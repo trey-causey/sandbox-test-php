@@ -3,7 +3,12 @@
         "guzzlehttp/guzzle": "^6.5",
         "twbs/bootstrap": "4.5.0",
         "phpunit/phpunit": "^8.5",
-        "ext-json": "*",
-      "ext-sqlite3": "*"
+        "ext-json": "*"
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
     }
+
 }
