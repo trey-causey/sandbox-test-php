@@ -1,56 +1,24 @@
-<?php
+<?php namespace interfaces\test;
 
-namespace interfaces\test;
-
-use phpDocumentor\Reflection\Types\Float_;
-
-interface person {
+interface IPerson {
     public function speak($words);
+    public function breath();
 }
 
-interface factory {
+interface IFactory {
     public function createNewDriver();
     public function createNewTeacher();
 }
 
-abstract class speaker {
+abstract class Speaker {
     function setDiameter($diameter) {
     }
 }
 
-class teacher implements person {
-    public function speak($words)
-    {
-        echo $words;
-    }
-}
-
-class driver implements person {
-    public function speak($words)
-    {
-        echo $words;
-    }
-}
-
-class juniorDriver extends driver {
+abstract class Person implements IPerson {
 
 }
 
-class seniorDriver extends driver {
+class Teacher extends Person {
 
 }
-
-class tweeter extends speaker {
-}
-
-class woofer extends speaker {
-
-}
-$vettel = new driver();
-$vettel->speak("\nleave me alone, Binotti");
-$leclerk = new juniorDriver();
-$leclerk->speak("\n please move VET");
-$abc = new teacher();
-$abc->speak("\ndo my homework");
-$highs = new tweeter();
-$highs->setDiameter(2.0);

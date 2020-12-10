@@ -3,12 +3,11 @@
 class Window {
     private $obj;
     private $x;
-    public function setShape($s) {
+    public function setShape(Shape $s) {
         $this->obj = $s;
     }
 
     public function Area() {
-
         return $this->obj->Area();
     }
 }
@@ -16,15 +15,21 @@ class Window {
 class Triangle implements Shape {
     public $base;
     public $heightAboveBase;
+    public $color;
     public function __construct()
     {
         $this->base = 45;
         $this->heightAboveBase = 28;
+        $this->color = "Red";
     }
 
     public function area()
     {
        return (($this->heightAboveBase * $this->base)/2);
+    }
+
+    public function showColor() {
+        echo $this->color;
     }
 }
 
