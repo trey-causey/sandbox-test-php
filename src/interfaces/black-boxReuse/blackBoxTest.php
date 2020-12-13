@@ -5,7 +5,7 @@ interface IType {
     public function methodB();
 }
 
-class ClassA implements IType {
+class SubTypeA implements IType {
     public function methodA()
     {
         // TODO: Implement methodA() method.
@@ -18,7 +18,7 @@ class ClassA implements IType {
 
 }
 
-class ClassB implements IType {
+class SubTypeB implements IType {
     public function methodA()
     {
         // TODO: Implement methodA() method.
@@ -30,5 +30,30 @@ class ClassB implements IType {
     public function methodC() {}
 }
 
+class RandomClass {
+    /**
+     * @var \IType
+     */
+    protected IType $var1;
+
+    public function __construct($var1)
+    {
+        $this->var1 = $var1;
+    }
+
+    /**
+     * @return IType
+     */
+    public function getVar1(): IType
+    {
+        return $this->var1;
+    }
+
+}
+
+$clientA = (new RandomClass(new SubTypeA()))->getVar1();
+$clientB = (new RandomClass(new SubTypeB()))->getVar1();
+var_dump($clientA);
+var_dump($clientB);
 
 

@@ -39,6 +39,11 @@ class Roster {
         $this->secondaryDriver = $secondaryDriver;
         $this->turboDriver = $turboDriver;
     }
+
+    public function addDriverToRoster(IDriver $driver)
+    {
+
+    }
 }
 
 $rosObj = new Roster(new StandardDriver(), new StandardDriver(), new TurboDriver());
