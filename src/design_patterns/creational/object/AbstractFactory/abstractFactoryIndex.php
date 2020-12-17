@@ -71,5 +71,7 @@ class WinCsvWriter implements CsvWriter {
     }
 }
 
-$writerFactory = new WinWriterFactory();
-$writerFactory->createJsonWriter();
+$winWriterFactory = new WinWriterFactory();
+$obj = $winWriterFactory->createJsonWriter();
+var_dump($winWriterFactory);
+var_dump($obj);

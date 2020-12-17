@@ -1,6 +1,5 @@
 <?php namespace Causey\ArrayAndObject;
 
-use Causey\Database\DatabasePlain;
 use Causey\Database\IDatabase;
 
 class DriverDTO
@@ -19,5 +18,4 @@ class DriverDTO
         $ans = $this->db->fetchAll($sql, $param);
 
     }
-
 }

@@ -1,13 +1,15 @@
 <?php namespace Causey\Models\Drivers;
 
-class Driver {
+class Driver implements IDriver {
     protected $id;
     protected $db;
+    protected $details;
 
     public function __construct($id, $db)
     {
         $this->id = $id;
         $this->db = $db;
+        $this->details = $this->getData();
     }
 
     public function makeDriverObject() {
@@ -21,3 +23,4 @@ class Driver {
         return $ans[0];
     }
 }
+
