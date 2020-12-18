@@ -11,6 +11,7 @@ abstract class Driver implements IDriver {
     protected $number;
     protected $code;
 
+
     public function __construct()
     {
         static $id = 1;
