@@ -1,4 +1,4 @@
-<?php
+<?php namespace Sandbox\DI;
 
 class App {
     protected static $registry = [];
@@ -8,6 +8,9 @@ class App {
     }
 
     public static function get($key) {
+        if(!array_key_exists($key, static::$registry)) {
+            throw new \Exception("No {$key} is bound in the container.");
+        }
         return static::$registry[$key];
     }
 }
