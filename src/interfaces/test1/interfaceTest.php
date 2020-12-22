@@ -21,4 +21,13 @@ abstract class Person implements IPerson {
 
 class Teacher extends Person {
 
+    public function speak($words)
+    {
+        // TODO: Implement speak() method.
+    }
+
+    public function breath()
+    {
+        // TODO: Implement breath() method.
+    }
 }
