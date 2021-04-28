@@ -7,7 +7,7 @@ class Solution1365 {
      * @return Integer[]
      */
     function smallerNumbersThanCurrent($nums) {
-/*        $ansArray = [];
+        $ansArray = [];
         foreach ($nums as $i=>$num) {
             $count = 0;
             foreach($nums as $j=>$element) {
@@ -17,8 +17,8 @@ class Solution1365 {
             }
             array_push($ansArray, $count);
         }
-        return $ansArray;*/
-        $sorted = $nums;
+        return $ansArray;
+/*        $sorted = $nums;
         sort($sorted);
         $number_map = [];
         foreach ($sorted as $position => $num) {
@@ -30,7 +30,7 @@ class Solution1365 {
         foreach ($nums as $num) {
             $result[] = $number_map[$num];
         }
-        return $result;
+        return $result;*/
     }
 }
 
